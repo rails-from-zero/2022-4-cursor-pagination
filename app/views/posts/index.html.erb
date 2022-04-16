@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <article>
+    <h3>
+      <%= link_to post.title, post %> (#<%= post.id %>)
+    </h3>
+    <p>
+      Asked by <%= post.author %> by <%= time_ago_in_words(post.created_at) %> ago
+    </p>
+  </article>
+<% end %>
